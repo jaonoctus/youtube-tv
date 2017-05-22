@@ -16,8 +16,8 @@ const launchMainWindow = () => {
     alwaysOnTop: true,
     frame: false,
     show: false,
-    x: width,
-    y: height
+    x: width - WIN_WIDTH,
+    y: height - WIN_HEIGHT
   })
 
   tray = new Tray(appIcon)
