@@ -1,0 +1,16 @@
+{
+  "name": "youtube-tv",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "git@github.com:JaoNoctus/youtube-tv.git",
+  "author": "João Vítor Dias <joaodias@noctus.org>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "electron": "^1.6.8",
+    "video.js": "^5.19.2",
+    "videojs-youtube": "^2.4.0"
+  }
+}

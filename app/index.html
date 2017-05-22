@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>youtube TV</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../node_modules/video.js/dist/video-js.css" />
+    <script src="../node_modules/video.js/dist/video.js"></script>
+    <script src="../node_modules/videojs-youtube/dist/Youtube.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <div class="action-bar">
+		  <svg viewBox="0 0 24 24" class="move"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icons.svg#icon-move"></use></svg>
+      <div class="action">
+		    <svg viewBox="0 0 24 24" class="menu is-panel-vsible"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
+		    <svg viewBox="0 0 24 24" class="close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icons.svg#icon-close"></use></svg>
+      </div>
+    </div>
+    <div class="panel is-visible">
+		  <div class="play-panel">
+			  <input type="text" id="video-url" placeholder="Cole a URL do vídeo do Youtube aqui" onkeyup="onInputKeyup(event)"/>
+			  <svg viewBox="0 0 24 24" class="play-btn"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/img/icons.svg#icon-play"></use></svg>
+		  </div>
+		  <div class="message"></div>
+    </div>
+    <video id="player" class="video-js vjs-default-skin" controls autoplay
+	    data-setup='{ "techOrder": ["youtube"], "sources":[{ "type": "video/youtube"}] }'>
+    </video>
+  </body>
+  <script src="assets/js/app.js" type="text/javascript"></script>
+</html>
