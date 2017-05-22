@@ -1,0 +1,92 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 100%; font-family: 'Open Sans', sans-serif; }
+
+.action-bar {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  transition: all 250ms linear;
+  -webkit-user-select: none;
+}
+.action { float: right; margin-right: 10px; margin-top: 15px; }
+.action-bar.hidden { opacity: 0; }
+
+.close, .menu, .move {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  pointer-events: all;
+}
+.close { margin-left: 5px; }
+.move { margin: 15px 10px; -webkit-app-region: drag; cursor: move; transform: rotate(45deg); }
+.close:hover, .menu:hover, .move:hover { fill: rgba(255,255,255,0.8); }
+.menu { transition: transform 250ms linear; transform-origin: center; }
+.menu.is-panel-visible { transform: rotateX(180deg); }
+
+.panel {
+  width: 100%;
+  height: 100%;
+  opacity: 0.99;
+  background: #c4202d;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  color: white;
+}
+.panel {
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 250ms linear;
+}
+.panel.is-visible {
+  opacity: 0.99;
+  pointer-events: all;
+}
+.play-panel {
+	width: 70%;
+  -webkit-app-region: no-drag;
+  z-index: 3;
+}
+.play-panel > input {
+  border: none;
+  width: calc(100% - 40px);
+  border-bottom: white solid 1px;
+  background-color: transparent;
+  outline: none;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+}
+
+.play-panel > input, *::-webkit-input-placeholder { color: #FFFFFF; }
+
+.message {
+  color: white;
+  width: 70%;
+}
+#player {
+  width: 100%;
+  height: 100vh;
+}
+.play-btn {
+	width: 24px;
+  height: 24px;
+	fill: white;
+	margin-left: -25px;
+  margin-bottom: -5px;
+	cursor: pointer;
+  border-radius: 2px;
+  transition: all 300ms linear;
+}
+.play-btn:hover {
+  background-color: #CB1E20;
+  fill: rgba(255,255,255,0.9);
+  transform: scale(1.2);
+}
+.video-js.vjs-default-skin .vjs-big-play-button { display: none; }

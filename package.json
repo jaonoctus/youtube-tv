@@ -9,6 +9,8 @@
   "author": "João Vítor Dias <joaodias@noctus.org>",
   "license": "GPL-3.0",
   "dependencies": {
-    "electron": "^1.6.8"
+    "electron": "^1.6.8",
+    "video.js": "^5.19.2",
+    "videojs-youtube": "^2.4.0"
   }
 }
